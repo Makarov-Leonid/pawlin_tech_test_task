@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "code"
+version = "0.1.0"
+description = ""
+authors = ["Leonid Makarov <4.leo.makarov@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.10.4"
+tqdm = "^4.66.1"
+sqlalchemy = "^2.0.25"
+python-dotenv = "^1.0.1"
+pydantic-settings = "^2.1.0"
+psycopg = "^3.1.17"
+psycopg-binary = "^3.1.17"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
