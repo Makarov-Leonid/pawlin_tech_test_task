@@ -4,7 +4,7 @@ import csv
 class CSVReader:
     @staticmethod
     def read(
-        path,
+            path
     ):
         with open(path) as csvfile:
             content = []
@@ -22,6 +22,16 @@ class CSVReader:
                     }
                 )
         return content
+
+    @staticmethod
+    def check_structure_csv_with_chicken_post(path):
+        with open(path) as csvfile:
+            reader = csv.reader(csvfile, delimiter=";")
+            header = next(reader)
+            if header == ['farm', 'house', 'breed_type', 'gender', 'daynum', 'target_weight']:
+                return True
+            else:
+                return False
 
 
 if __name__ == "__main__":

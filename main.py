@@ -11,6 +11,8 @@ from files.csv_writer import CSVWriter
 def is_valid_file(parser, arg):
     if arg.split(".")[-1] != "csv":
         parser.error(f"The file {arg} is not csv!")
+    if CSVReader.check_structure_csv_with_chicken_post(arg):
+        parser.error(f"The csv file on the {arg} path has an unsupported structure!")
     return arg
 
 
