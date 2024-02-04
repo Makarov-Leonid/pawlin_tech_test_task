@@ -11,7 +11,7 @@ from files.csv_writer import CSVWriter
 def is_valid_file(parser, arg):
     if arg.split(".")[-1] != "csv":
         parser.error(f"The file {arg} is not csv!")
-    return arg  # return an open file handle
+    return arg
 
 
 def upload_csv_to_db(path):
